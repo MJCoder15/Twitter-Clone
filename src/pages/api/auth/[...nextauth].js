@@ -34,6 +34,8 @@ export default NextAuth({
             email: profile.email,
             image: profile.image,
           });
+
+          user.save();
         }
 
         return true;
@@ -43,6 +45,9 @@ export default NextAuth({
         return false;
       }
     },
+    async signOut({ redirect, ...args}){
+      return redirect('/');
+    }
   },
 });
 

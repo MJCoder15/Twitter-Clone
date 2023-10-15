@@ -15,7 +15,7 @@ const Home = () => {
 
   if (session) {
 
-    router.push('/home')
+    router.push('/home');
     
     return (
       <>
@@ -24,6 +24,8 @@ const Home = () => {
       </>
     );
   }
+
+  
 
   return (
     <>
